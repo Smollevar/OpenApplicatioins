@@ -11,7 +11,12 @@ public class Main {
             account++;
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Cant find application with this name...");
+            try {
+                r.exec("Steam");
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
 }
