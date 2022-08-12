@@ -7,7 +7,7 @@ public class Main {
         Runtime r = Runtime.getRuntime();
         try{
             System.out.println("Launch steam");
-            r.exec("/c/Users/ugand/Desktop");
+            r.exec("/c/Users/ugand/Desktop/'steam.exe — ярлык.lnk'");
             account++;
         } catch (IOException e) {
             System.out.println("Cant find or launch app");
