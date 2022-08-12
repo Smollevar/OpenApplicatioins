@@ -15,7 +15,12 @@ public class Main {
             try {
                 r.exec("Steam");
             } catch (IOException ex) {
-                throw new RuntimeException(ex);
+                System.out.println("Another try...");
+                try {
+                    r.exec("Steam.exe");
+                } catch (IOException exc) {
+                    throw new RuntimeException(exc);
+                }
             }
         }
     }
