@@ -6,22 +6,11 @@ public class Main {
     public static void main(String[] args) {
         Runtime r = Runtime.getRuntime();
         try{
-            System.out.println("ss");
-            r.exec("steam");
+            System.out.println("Launch steam");
+            r.exec("/c/Users/ugand/Desktop");
             account++;
-
         } catch (IOException e) {
-            System.out.println("Cant find application with this name...");
-            try {
-                r.exec("Steam");
-            } catch (IOException ex) {
-                System.out.println("Another try...");
-                try {
-                    r.exec("Steam.exe");
-                } catch (IOException exc) {
-                    throw new RuntimeException(exc);
-                }
-            }
+            System.out.println("Cant find or launch app");
         }
     }
 }
